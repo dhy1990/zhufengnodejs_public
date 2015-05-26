@@ -4,7 +4,7 @@ client.on('error',function(err){
     console.log(err);
 });
 client.select(1,function(){
-    client.set('name','zzzzzz',function(err,result){
+    client.hmset('person_100',{name:11,age:222},function(err,result){
         console.log(arguments);
     });
 });
