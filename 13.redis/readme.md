@@ -22,5 +22,27 @@ hmset 设置多个值
 hget 获取值 
 hgetall 获取所有值
 hdel 删除值
+设置再取出
+key person_100 name tom age 6
+##链表类型 list
+LPUSH  key value 往key的左边添加元素，返回链表的长度
+RPUSH key value 向链表右边放入元素，返回链表的长度
+LPOP key 移除链表左边的第一个元素，返回移除的值
+RPOP key 移除链表右边的第一个元素，返回移除的值
+LRANGE key star end 获取链表中的一个片断。
+#集合
+唯一和无序
+SADD 向集合中添加元素
+SREM 从集合中删除元素
+SMEMBERS 返回集合中所有的元素
+#有序集合
+每一个元素都关联了一个分数，可以按分数获取元素
+ZADD key score member 向集合中添加元素
+ZREM key member 删除元素
+ZRANGE key start stop 按范围元素
+
+
+
+
 
 
