@@ -23,8 +23,17 @@ create table  tname(colname type
 是否不可以为空 默认值 是否自动增长 是否主键
 [not null|null] [default default value]
 [auto_increment] [primary key])
-create table user(id int,name varchar(32));
-
-
+create table user(id int primary key,name varchar(32));
+create table score2 select * from score;
+#查看表结构
+show tables from school; 
+show columns from score;
+show index from score;
+#修改表结构
+alter table score add note varchar(32); 增加列
+alter table score modify note int; 修改列
+alter table score change note vnote int;改名列
+alter table score drop vnote;删除列
+alter table score rename score3;重命名表
 
 
