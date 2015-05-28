@@ -117,3 +117,4 @@ select * from score s inner join student t on s.id = t.id;
 update score set name='zfpx',lesson='node.js',score=60 where id in (1,2,3)
 update score set name='zfpx',lesson='js',score=60 where id in (4,5,6)
 删除ID不同，但其它信息都相同的冗余信息
+select * from score where id in (select id from score where id<3);
