@@ -101,3 +101,19 @@ limit 1,1
 chinese xx
 math xxxx
 english xxx
+
+计算每个人的总成绩并排名 显示字段(姓名,总成绩)
+从高到低排
+zhangsan 200
+lisi 150
+wangwu 120
+sum() 汇总
+
+##多表查询
+select * from score s,student t where s.id = t.id;
+select * from score s inner join student t on s.id = t.id;
+
+
+update score set name='zfpx',lesson='node.js',score=60 where id in (1,2,3)
+update score set name='zfpx',lesson='js',score=60 where id in (4,5,6)
+删除ID不同，但其它信息都相同的冗余信息
