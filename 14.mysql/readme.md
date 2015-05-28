@@ -35,5 +35,40 @@ alter table score modify note int; 修改列
 alter table score change note vnote int;改名列
 alter table score drop vnote;删除列
 alter table score rename score3;重命名表
+#删除表
+drop table if exists user ;
+#操作数据
+##插入数据
+insert into tablename(col1,col2...) values(val1,val2...)
+insert into tablename set col1=val1,col2=val2
+
+insert into score(name,lesson,score) 
+values('zhangsan','chinese',70);
+insert into score(name,lesson,score) 
+values('zhangsan','math',81);
+insert into score(name,lesson,score) 
+values('zhangsan','english',83);
+
+insert into score(name,lesson,score) 
+values('lisi','chinese',80),('lisi','math',93)
+,('lisi','english',70);
+
+把一个表里的数据复制到另一个表中
+create table score2 select * from score;
+select * from  score2;
+insert into score select * from score;
+#查询
+select * from tablename
+select * from score2
+select name,lesson,score from score2;
+
+select
+column names 查询哪些列
+from tables 从哪些表里面查询
+where 查询条件
+group by 按哪个列进行分组
+having 第二条件，也就是说对分组后的数据进行过滤
+order by 排序，对结果进行排序的规则
+limit 0,5
 
 
