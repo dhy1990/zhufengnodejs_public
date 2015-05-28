@@ -72,3 +72,29 @@ order by 排序，对结果进行排序的规则
 limit 0,5
 
 
+select * from score where score>80 or score<80
+group by 
+根据所给的列名返回分组的查询结果。
+select lesson,max(score) from score group by lesson
+
+order 指定顺序
+select lesson,max(score) from score group by lesson
+order by max(score) desc
+
+having 对分组后的条件进行过滤
+select lesson,max(score) from score group by lesson
+having max(score) > 90
+order by max(score) desc
+
+select lesson,max(score) from score group by lesson
+having max(score) < 90
+order by max(score) desc
+limit 1
+
+
+select lesson,max(score) from score group by lesson
+having max(score) < 90
+order by max(score) desc
+limit 1,1
+
+查询每门课程的平均分,返回课程和平均分二列 avg(score)
