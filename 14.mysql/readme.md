@@ -18,3 +18,5 @@ use school;
 ##删除数据库
 drop database if exists school;
 
+
+
