@@ -98,3 +98,6 @@ order by max(score) desc
 limit 1,1
 
 查询每门课程的平均分,返回课程和平均分二列 avg(score)
+chinese xx
+math xxxx
+english xxx
