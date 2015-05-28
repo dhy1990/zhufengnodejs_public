@@ -17,6 +17,14 @@ show databases like 'school%';
 use school;
 ##删除数据库
 drop database if exists school;
+#数据库表
+##创建表
+create table  tname(colname type 
+是否不可以为空 默认值 是否自动增长 是否主键
+[not null|null] [default default value]
+[auto_increment] [primary key])
+create table user(id int,name varchar(32));
+
 
 
 
