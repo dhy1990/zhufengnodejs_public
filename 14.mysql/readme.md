@@ -122,3 +122,14 @@ delete from score where id in
 (
 select a.id from (SELECT MAX(id) id FROM score  GROUP BY NAME,LESSON,SCORE) a
 )
+
+person
+id name city
+
+
+
+select * from person group by city
+1 zhangsan beijing
+3 wangwu beijing
+
+2 lisi shanghai

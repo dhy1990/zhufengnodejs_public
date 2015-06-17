@@ -21,6 +21,10 @@ module.exports = function(grunt){
      *
      */
     grunt.registerTask('after',function(){
+      var content = grunt.file.read('./test.js','utf8');
+      var comment = '//<%=pkg.name%> <%=pkg.author%>'+grunt.util.normalizelf('\n');
+      comment = grunt.template.process(comment);
+     grunt.file.write('./test2.js',comment+content)
 
     });
 
