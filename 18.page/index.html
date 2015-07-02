@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body>
+ <div class="container" ng-controller="userController">
+     <div class="panel panel-default">
+         <div class="panel-heading">
+             <a class="btn btn-xs btn-primary">增加用户</a>
+         </div>
+         <div class="panel-body">
+             <ul class="list-group">
+                <li class="list-group-item" ng-repeat="user in users track by $index">
+                    {{user.username}}|{{user.password}}|{{user.email}}
+                </li>
+             </ul>
+         </div>
+         <div class="panel-footer">Panel footer</div>
+     </div>
+ </div>
+ <script>
+     var app = angular.module('appModule',[]);
+     app.controller('userController',function($scope){
+     $scope.users = [{username:'zfpx',password:'123456',email:'zfpx@126.com'}];
+     });
+ </script>
+</body>
+
+</html>
