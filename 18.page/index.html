@@ -20,14 +20,40 @@
              </ul>
          </div>
          <div class="panel-footer">
-
+           <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                   <form action="" class="form-horizontal" role="form">
+                       <div class="form-group">
+                           <label for="username">用户名</label>
+                           <input type="text" class="form-control" ng-model="user.username"/>
+                       </div>
+                       <div class="form-group">
+                           <label for="password">密码</label>
+                           <input type="text" class="form-control" ng-model="user.password"/>
+                       </div>
+                       <div class="form-group">
+                           <input type="button" class="form-control" ng-click="addUser()" value="提交"/>
+                       </div>
+                   </form>
+               </div>
+           </div>
          </div>
      </div>
  </div>
  <script>
      var app = angular.module('appModule',[]);
-     app.controller('userController',function($scope){
-     $scope.users = [{username:'zfpx'},{username:'zfpx'}];
+     app.controller('userController',function($scope,$http){
+        $scope.users = [{username:'zfpx'},{username:'zfpx'}];
+        $scope.addUser = function(){
+            $http({
+                method:'POST',
+                url:'/user',
+                data:$scope.user,
+                dataType:'json'
+            }).then(function(res){
+                $scope.users = res.data;
+            });
+        }
      });
  </script>
 </body>
