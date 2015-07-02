@@ -14,18 +14,20 @@
          </div>
          <div class="panel-body">
              <ul class="list-group">
-                <li class="list-group-item" ng-repeat="user in users track by $index">
+                <li class="list-group-item" ng-repeat="user in users ">
                     {{user.username}}|{{user.password}}|{{user.email}}
                 </li>
              </ul>
          </div>
-         <div class="panel-footer">Panel footer</div>
+         <div class="panel-footer">
+
+         </div>
      </div>
  </div>
  <script>
      var app = angular.module('appModule',[]);
      app.controller('userController',function($scope){
-     $scope.users = [{username:'zfpx',password:'123456',email:'zfpx@126.com'}];
+     $scope.users = [{username:'zfpx'},{username:'zfpx'}];
      });
  </script>
 </body>
